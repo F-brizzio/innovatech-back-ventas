@@ -20,8 +20,7 @@ jobs:
           password: ${{ secrets.DOCKER_TOKEN }}
 
       - name: Construir imagen Docker
-        run: docker build -t lucianodelgado/innovatech-back-ventas:latest .
-
+        run: docker build -t lucianodelgado/innovatech-back-ventas:latest ./Springboot-API-REST
       - name: Publicar imagen en Docker Hub
         run: docker push lucianodelgado/innovatech-back-ventas:latest
 
